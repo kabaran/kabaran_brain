@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易占断 - I Ching Divination</title>
+    <meta name="description" content="易経六十四卦による本格的な占断アプリケーション">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">
+                <span class="title-main">易占断</span>
+                <span class="title-sub">I Ching Divination</span>
+            </h1>
+            <p class="subtitle">六十四卦による本格占断システム</p>
+        </header>
+
+        <main>
+            <section class="divination-section">
+                <button id="divineBtn" class="divine-button">
+                    <span class="button-text">筮竹を振る</span>
+                    <span class="button-icon">☯</span>
+                </button>
+                
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>卦を立てています...</p>
+                </div>
+            </section>
+
+            <section id="result" class="result-section hidden">
+                <div class="result-card">
+                    <div class="hexagram-display" id="hexagramDisplay"></div>
+                    
+                    <div class="hexagram-info">
+                        <h2 id="hexagramName" class="hexagram-name"></h2>
+                        <p id="hexagramReading" class="hexagram-reading"></p>
+                    </div>
+
+                    <div class="hexagram-details">
+                        <div class="detail-section">
+                            <h3>卦の構成</h3>
+                            <p id="hexagramStructure"></p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>象徴</h3>
+                            <p id="hexagramSymbol"></p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>意味</h3>
+                            <p id="hexagramMeaning"></p>
+                        </div>
+
+                        <div class="detail-section changing-lines" id="changingLinesSection">
+                            <h3>変爻</h3>
+                            <div id="changingLines"></div>
+                        </div>
+
+                        <div class="detail-section advice">
+                            <h3>アドバイス</h3>
+                            <p id="hexagramAdvice"></p>
+                        </div>
+                    </div>
+
+                    <div class="result-meta">
+                        <p id="timestamp"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2>占断履歴</h2>
+                <button id="clearHistoryBtn" class="clear-history-btn">履歴をクリア</button>
+                <div id="historyList" class="history-list"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 易占断システム - Powered by Ancient Wisdom</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

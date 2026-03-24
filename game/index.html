@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テニス壁打ちゲーム</title>
+    <meta name="description" content="エキサイティングなテニス壁打ちゲームで反射神経を鍛えよう！">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎾 テニス壁打ち</h1>
+            <div class="score-panel">
+                <div class="score-item">
+                    <span class="label">スコア</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">ベストスコア</span>
+                    <span class="value" id="highScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="game-overlay" id="startScreen">
+                <div class="overlay-content">
+                    <h2>テニス壁打ちへようこそ！</h2>
+                    <p>マウスまたはタッチでラケットを操作してボールを打ち返そう</p>
+                    <button class="btn-primary" id="startBtn">ゲームスタート</button>
+                    <div class="controls-info">
+                        <p>🖱️ マウス移動でラケットを操作</p>
+                        <p>📱 タッチ&ドラッグでも遊べます</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-overlay hidden" id="gameOverScreen">
+                <div class="overlay-content">
+                    <h2>ゲームオーバー！</h2>
+                    <p class="final-score">スコア: <span id="finalScore">0</span></p>
+                    <p class="message" id="gameOverMessage"></p>
+                    <button class="btn-primary" id="restartBtn">もう一度プレイ</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="difficulty-selector">
+                <label>難易度:</label>
+                <select id="difficulty">
+                    <option value="easy">簡単</option>
+                    <option value="normal" selected>普通</option>
+                    <option value="hard">難しい</option>
+                </select>
+            </div>
+            <div class="stats">
+                <span>⚡ ボール速度: <span id="ballSpeed">5</span></span>
+                <span>🎯 連続ヒット: <span id="combo">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
