@@ -74,7 +74,7 @@ def main():
     append_to_note(note_path, text)
 
     timestamp = datetime.now().strftime(TIME_FORMAT)
-    print(f"✅ 追記完了: {note_path.name}  ({timestamp})")
+    print(f"[OK] 追記完了: {note_path.name}  ({timestamp})")
     print(f"   場所: {note_path}")
 
 
