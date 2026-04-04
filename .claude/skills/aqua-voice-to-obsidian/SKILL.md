@@ -16,7 +16,7 @@ description: >
 ## Vault情報
 
 - **Vaultパス（Windows）**: `C:\Users\mhc01\Desktop\kabaran_brain`
-- **デイリーノートフォルダ**: `Daily Notes`（Vaultルート直下）
+- **デイリーノートフォルダ**: `日記`（Vaultルート直下）
 - **ファイル名形式**: `YYYY-MM-DD.md`
 
 ---

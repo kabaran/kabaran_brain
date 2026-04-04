@@ -18,7 +18,7 @@ from pathlib import Path
 
 
 # ── 設定 ──────────────────────────────────────────────────
-DEFAULT_NOTES_FOLDER = "Daily Notes"  # Vaultルート直下のフォルダ名
+DEFAULT_NOTES_FOLDER = "日記"      # Vaultルート直下のフォルダ名
 DATE_FORMAT = "%Y-%m-%d"           # ファイル名形式: 2026-04-03.md
 TIME_FORMAT = "%H:%M"              # タイムスタンプ形式: 14:35
 # ─────────────────────────────────────────────────────────
