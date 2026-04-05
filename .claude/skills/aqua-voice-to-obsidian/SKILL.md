@@ -15,7 +15,7 @@ description: >
 
 ## Vault情報
 
-- **Vaultパス（Windows）**: `C:\Users\mhc01\Desktop\kabaran_brain`
+- **Vaultパス（Windows）**: `C:\Users\mhc01\OneDrive\デスクトップ\kabaran_brain`
 - **デイリーノートフォルダ**: `日記`（Vaultルート直下）
 - **ファイル名形式**: `YYYY-MM-DD.md`
 
@@ -38,7 +38,7 @@ vault_accessible = mnt_path.exists()
 もし `kabaran_brain` フォルダが見つからない場合は、
 `request_cowork_directory` ツールを使ってユーザーにフォルダ選択を促す：
 
-> 「Obsidian Vaultフォルダ（`C:\Users\mhc01\Desktop\kabaran_brain`）を選択してください」
+> 「Obsidian Vaultフォルダ（`C:\Users\mhc01\OneDrive\デスクトップ\kabaran_brain`）を選択してください」
 
 フォルダが選択されると、`/sessions/<id>/mnt/kabaran_brain/` がVaultのルートになる。
 
@@ -118,7 +118,7 @@ print(result.stdout or result.stderr)
 
 | エラー | 対処 |
 |--------|------|
-| `kabaran_brain` が見つからない | Vaultフォルダ未マウント → `request_cowork_directory` で `C:\Users\mhc01\Desktop\kabaran_brain` を要求 |
+| `kabaran_brain` が見つからない | Vaultフォルダ未マウント → `request_cowork_directory` で `C:\Users\mhc01\OneDrive\デスクトップ\kabaran_brain` を要求 |
 | `PermissionError` | ファイルが書き込み禁止 → ユーザーに確認を求める |
 | `UnicodeEncodeError` | エンコード問題 → スクリプトのUTF-8設定を確認 |
 
