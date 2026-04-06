@@ -16,7 +16,7 @@ description: >
 ## Vault情報
 
 - **Vaultパス（Windows）**: `C:\Users\mhc01\Desktop\kabaran_brain`
-- **デイリーノートフォルダ**: `Daily Notes`（Vaultルート直下）
+- **デイリーノートフォルダ**: `日記`（Vaultルート直下）
 - **ファイル名形式**: `YYYY-MM-DD.md`
 
 ---
@@ -31,7 +31,7 @@ from pathlib import Path
 
 cwd = os.getcwd()  # 例: /sessions/dreamy-exciting-mayer
 mnt_path = Path(cwd) / "mnt" / "kabaran_brain"
-daily_notes_path = mnt_path / "Daily Notes"
+daily_notes_path = mnt_path / "日記"
 vault_accessible = mnt_path.exists()
 ```
 
