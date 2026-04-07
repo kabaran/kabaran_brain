@@ -16,7 +16,7 @@ description: >
 ## Vault情報
 
 - **Vaultパス（Windows）**: `C:\Users\mhc01\Desktop\kabaran_brain`
-- **デイリーノートフォルダ**: `Daily Notes`（Vaultルート直下）
+- **デイリーノートフォルダ**: `日記`（Vaultルート直下） ← Obsidianの`daily-notes.json`で設定済み。`Daily Notes`ではない
 - **ファイル名形式**: `YYYY-MM-DD.md`
 
 ---
@@ -31,7 +31,7 @@ from pathlib import Path
 
 cwd = os.getcwd()  # 例: /sessions/dreamy-exciting-mayer
 mnt_path = Path(cwd) / "mnt" / "kabaran_brain"
-daily_notes_path = mnt_path / "Daily Notes"
+daily_notes_path = mnt_path / "日記"
 vault_accessible = mnt_path.exists()
 ```
 
@@ -129,3 +129,12 @@ print(result.stdout or result.stderr)
 - デイリーノートが存在しない場合は新規作成する（ヘッダー付き）
 - 追記は常にファイル末尾に行う（既存の内容は一切変更しない）
 - タイムスタンプは `## HH:MM` 形式の見出しで区切る
+
+## 不明な単語・誤変換への対処方針
+
+**まず追記を優先する。確認のために追記を止めない。**
+
+- 誤変換リスト（`feedback_voice_corrections.md`）に一致する語は自動修正する
+- リストにない不明な語は `〔語句？〕` の形でフラグを立てて追記する
+- 追記完了後、フラグを立てた箇所をユーザーに報告して確認を求める
+- ユーザーが正しい語を教えてくれたら、ノートを修正し誤変換リストに追記する
